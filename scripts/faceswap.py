@@ -1,5 +1,8 @@
 import os
-import gradio as gr
+try:
+    import gradio as gr
+except ImportError:
+    gr = None
 import modules.scripts as scripts
 from modules.upscaler import Upscaler, UpscalerData
 from modules import scripts, shared, images, scripts_postprocessing
